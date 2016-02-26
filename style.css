@@ -124,6 +124,7 @@ body.single-post .column article header.article-header hgroup h1.article-title {
 	padding: 0 .8em .6em 0;
 	border-bottom:4px solid #4a4a4a;
 	margin-bottom:.4em;
+	text-align: center;
 }
 body.single-post .source {
 	margin-bottom:3rem;
