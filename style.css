@@ -37,7 +37,7 @@ html main ul li {
 html main blockquote {
 	font: inherit;
 	padding:0;
-	color:#00a5bd;
+	color:rgba(0,165,189,1);
 	margin:2em 0;
 }
 html main blockquote:before {
@@ -247,6 +247,12 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	}
 }
 @media screen and (max-width: 490px) {
+	html main blockquote:before {
+		color:rgba(0,165,189,.2);
+		position: relative;
+		top:18px;
+		left:-10px;
+	}
 	.fluid .row.side-right .column.one {
 		width:100%;
 		padding-left:1em;
