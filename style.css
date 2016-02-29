@@ -38,6 +38,7 @@ html main blockquote {
 	font: inherit;
 	padding:0;
 	color:#00a5bd;
+	margin:2em 0;
 }
 html main blockquote:before {
 	content:'\201C';
@@ -53,7 +54,7 @@ html main blockquote p {
 }
 html main blockquote cite {
 	font-style: italic;
-	font-size:1.2rem;
+	font-size:1.1rem;
 }
 html main ol,
 html main ul {
@@ -80,10 +81,15 @@ hr {
     margin-right:auto;
 }
 div.video-wrap {
-	float:right;
+	float: right;
+    width: 70%;
+    margin: .5rem -25% 1rem 2rem;
 }
 div.video-wrap iframe {
 	width:420px;
+}
+.ytp-chrome-top {
+	display:none !important;
 }
 /**************************************
 	Logo
@@ -141,6 +147,7 @@ body.single-post footer.main-footer {
 }
 body.single-post footer.main-footer .column {
 	padding-top:0;
+	text-align: center;
 }
 /**************************************
 	Archive feed
@@ -198,4 +205,75 @@ body.blog footer.archive-footer {
 }
 body.blog footer.archive-footer .row.side-right .column.one {
 	width:100%;
+}
+/**************************************
+	Media queries
+**************************************/
+
+@media screen and (min-width: 791px) and (max-width: 990px) {
+	.fluid .row.side-right .column.one {
+		width:100%;
+	}
+	div.video-wrap {
+		float:none;
+	}
+	html main .logo-wrap #logo { 
+		width:40%;
+	}
+	body.blog .spacing-loose .single.gutter .column:not(.gutterless) {
+		padding-left:1em;
+		padding-right:1em;
+	}
+	body.blog figure.article-thumbnail {
+		height:180px;
+	}
+}
+@media screen and (min-width: 491px) and (max-width: 790px) {
+	.fluid .row.side-right .column.one {
+		width:100%;
+	}
+	div.video-wrap {
+		float:none;
+	}
+	html main .logo-wrap #logo { 
+		width:40%;
+	}
+	.spacing-loose .single.gutter .column:not(.gutterless) {
+		padding-left:1em;
+		padding-right:1em;
+	}
+	body.blog figure.article-thumbnail {
+		height:inherit;
+	}
+}
+@media screen and (max-width: 490px) {
+	.fluid .row.side-right .column.one {
+		width:100%;
+		padding-left:1em;
+	}
+	.spacing-loose .side-right.gutter .column.one:not(.gutterless) {
+		padding-right:1em;
+	}
+	div.video-wrap {
+		float:none;
+		width:490px;
+		margin-left:0;
+	}
+	div.video-wrap iframe {
+		width:390px;
+	}
+	html main .logo-wrap #logo { 
+		width:70%;
+	}
+	.spacing-loose .single.gutter .column:not(.gutterless) {
+		padding-left:1em;
+		padding-right:1em;
+	}
+	body.blog .fluid .row.single.flex .column.one { 
+		display:block;
+	}
+	body.blog .fluid .row.single.flex .column.one article {
+		padding-left:0;
+		width:380px;
+	}
 }
