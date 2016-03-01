@@ -39,7 +39,7 @@ if ( function_exists( 'wsuwp_uc_get_object_type_slugs' ) && in_array( get_post_t
 <footer class="main-footer">
 	<section class="row single pager gutter pad-ends">
 		<div class="column one">
-			<a href="/">Return to archive</a>
+			<a href="/previous-lectures/">Return to previous lectures</a>
 		</div>
 	</section><!--pager-->
 </footer>
