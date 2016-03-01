@@ -22,8 +22,7 @@ html main {
 	min-height:100%;
 }
 html body {
-	    background-image:linear-gradient(to bottom, rgba(0, 165, 189, 1) 20%, rgba(185, 192, 10, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00a5bd', endColorstr='#b9c00a', GradientType=1);
+	    
 }
 /**************************************
 	Typography
@@ -188,6 +187,10 @@ body.page-register h1 + h2 {
 body.page-register h3 {
 	margin-top:3rem;
 }
+
+body.page-register p + h3 {
+	margin-top:0;
+}
 body.page-register hr {
 	margin-top:1rem;
 }
@@ -324,6 +327,50 @@ body.blog footer.archive-footer {
 }
 body.blog footer.archive-footer .row.side-right .column.one {
 	width:100%;
+}
+/**************************************
+	Random colors
+**************************************/
+.ten1,
+.ten3 {
+	    background: rgb(0, 165, 189);
+    background-image: -webkit-gradient(linear, bottom top, bottom top, color-stop(20%, rgba(0, 165, 189, 1)), color-stop(100%, rgba(185, 192, 10, 1)));
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 165, 189, 1) 20%, rgba(185, 192, 10, 1) 100%);
+    background-image: linear-gradient(to top, rgba(0, 165, 189, 1) 20%, rgba(185, 192, 10, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00a5bd', endColorstr='#b9c00a', GradientType=1);
+}
+.ten2,
+.ten4 {
+	    background: #fb5272;
+    background: -moz-linear-gradient(bottom, #fb5272 20%, #f8be01 100%);
+    background-image: -webkit-gradient(linear, bottom top, right top, color-stop(20%, #fb5272), color-stop(100%, #f8be01));
+    background-image: -webkit-linear-gradient(left, #fb5272 20%, #f8be01 100%);
+    background-image: linear-gradient(to top, #fb5272 20%, #f8be01 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fb5272', endColorstr='#f8be01', GradientType=1);
+}
+.ten5,
+.ten7 {
+	background: #ff5b35;
+    background-image: -webkit-gradient(linear, bottom top, bottom top, color-stop(10%, #ff5b35), color-stop(100%, #7aa1c5));
+    background-image: -webkit-linear-gradient(bottom, #ff5b35 10%, #7aa1c5 100%);
+    background-image:linear-gradient(to top, #ff5b35 10%, #7aa1c5 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff5b35', endColorstr='#7aa1c5', GradientType=1);
+}
+.ten6,
+.ten8 {
+	    background: #b9c00a;
+    background-image: -webkit-gradient(linear, bottom top, bottom top, color-stop(20%, #b9c00a), color-stop(100%, #ff5b35));
+    background-image: -webkit-linear-gradient(bottom, #b9c00a 20%, #ff5b35 100%);
+    background-image: linear-gradient(to top, #b9c00a 20%, #ff5b35 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#b9c00a', endColorstr='#ff5b35', GradientType=1);
+}
+.ten9,
+.ten10 {
+	background: #03c3b2;
+    background-image: -webkit-gradient(linear, bottom top, bottom top, color-stop(21%, #03c3b2), color-stop(100%, #fb5272));
+    background-image: -webkit-linear-gradient(bottom, #03c3b2 21%, #fb5272 100%);
+    background-image: linear-gradient(to top, #03c3b2 21%, #fb5272 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#03c3b2', endColorstr='#fb5272', GradientType=1);
 }
 /**************************************
 	Media queries
