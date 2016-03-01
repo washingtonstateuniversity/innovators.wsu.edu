@@ -32,7 +32,7 @@ html main p,
 html main ol li,
 html main ul li {
 	font-size:1.1rem;
-	line-height: 1.4;
+	line-height: 1.5;
 }
 html main blockquote {
 	font: inherit;
@@ -69,6 +69,9 @@ html main h2 {
 	font-weight:500;
 	padding-bottom:1.5rem;
 }
+hr + h2 {
+	padding-top:2rem;
+}
 /**************************************
 	Utilities
 **************************************/
@@ -80,13 +83,14 @@ hr {
     margin-left:auto;
     margin-right:auto;
 }
-div.video-wrap {
+span.embed-youtube {
 	float: right;
     width: 70%;
     margin: .5rem -25% 1rem 2rem;
 }
-div.video-wrap iframe {
+span.embed-youtube iframe {
 	width:420px;
+	height: 240px;
 }
 .ytp-chrome-top {
 	display:none !important;
@@ -148,6 +152,112 @@ body.single-post footer.main-footer {
 body.single-post footer.main-footer .column {
 	padding-top:0;
 	text-align: center;
+}
+/**************************************
+	Page
+**************************************/
+body.page .featured-image {
+	width:360px;
+	height:222px;
+	background-size: initial;
+	margin-left: auto;
+    margin-right: auto;
+}
+body.page .row .column.two {
+	display:none;
+}
+body.page .row .column,
+body.page footer {
+	float:none;
+	margin-left: auto;
+	margin-right: auto;
+}
+/**************************************
+	Register Page
+**************************************/
+body.page-register h1 + h2 {
+	padding-top:0;
+}
+body.page-register h3 {
+	margin-top:3rem;
+}
+body.page-register hr {
+	margin-top:1rem;
+}
+body.page-register .gform_wrapper form div.gform_body ul.gform_fields li.gfield {
+	padding-bottom:1rem;
+}
+body.page-register .gform_wrapper form div.gform_body ul.gform_fields li label.gfield_label {
+	font-size: 1.5rem;
+	font-weight:400;
+}
+body.page-register .gform_wrapper form div.gform_body ul.gform_fields li div.ginput_container span.name_prefix {
+	width:100%;
+}
+body.page-register .gform_wrapper form div.gform_body input,
+body.page-register .gform_wrapper form div.gform_body select {
+	height:47px;
+	font-size:1.5rem;
+}
+body .gform_wrapper label.gfield_label + div.ginput_container {
+	color:#23282B;
+	padding-bottom:1.5em;
+	padding-top: .8em;
+}
+.gform_wrapper .ginput_complex label {
+	margin:0 0 2em 0;
+}
+.gform_wrapper .gform_footer {
+	margin-top:0;
+	padding-top:0;
+}
+.gform_wrapper .gform_footer input[type=submit] {
+	float: right;
+	clear:both;
+	margin-bottom:2rem;
+}
+main input[type=text], 
+main input[type=password], 
+main input[type=email], 
+main select,
+main textarea {
+	border-radius: 0px;
+	color:#23282B;
+}
+main input[type=text]:active, 
+main input[type=password]:active, 
+main input[type=email]:active, 
+main select:active,
+main textarea:active,
+main input[type=text]:focus, 
+main input[type=password]:focus, 
+main input[type=email]:focus, 
+main select:focus,
+main textarea:focus {
+	border:1px solid rgba(0,165,189,1);
+}
+.gform_wrapper .gform_footer input.button, 
+.gform_wrapper .gform_footer input[type=submit] {
+	font-size:1.4em;
+	background: #fff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #4a4a4a;
+    border-radius: 0;
+    color: #464e54;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 2em;
+    line-height: normal;
+    padding: .5em 1em;
+    vertical-align: middle;
+}    
+.gform_wrapper .gform_footer input.button:hover, 
+.gform_wrapper .gform_footer input[type=submit]:hover {
+	color: #fff;
+    background: #981E32;
+    border:1px solid #981E32;
+    transition:background .8s;
 }
 /**************************************
 	Archive feed
@@ -214,7 +324,7 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	.fluid .row.side-right .column.one {
 		width:100%;
 	}
-	div.video-wrap {
+	span.embed-youtube {
 		float:none;
 	}
 	html main .logo-wrap #logo { 
@@ -232,7 +342,7 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	.fluid .row.side-right .column.one {
 		width:100%;
 	}
-	div.video-wrap {
+	span.embed-youtube {
 		float:none;
 	}
 	html main .logo-wrap #logo { 
@@ -260,12 +370,14 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	.spacing-loose .side-right.gutter .column.one:not(.gutterless) {
 		padding-right:1em;
 	}
-	div.video-wrap {
+	span.embed-youtube {
+		display: initial !important;
 		float:none;
 		width:490px;
 		margin-left:0;
+		text-align: center;
 	}
-	div.video-wrap iframe {
+	span.embed-youtube iframe {
 		width:390px;
 	}
 	html main .logo-wrap #logo { 
@@ -281,5 +393,17 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	body.blog .fluid .row.single.flex .column.one article {
 		padding-left:0;
 		width:380px;
+	}
+	.gform_wrapper .ginput_complex.ginput_container.has_first_name.has_middle_name.no_last_name span,
+	.gform_wrapper .ginput_complex.ginput_container.has_first_name.no_middle_name.has_last_name span,
+	 .gform_wrapper .ginput_complex.ginput_container.no_first_name.has_middle_name.has_last_name span {
+			width:100%;
+	}
+	div.ginput_container_name span {
+		padding:0;
+	}
+	.gform_wrapper .gform_footer input[type=submit] {
+		float:none;
+		width:100%;
 	}
 }
