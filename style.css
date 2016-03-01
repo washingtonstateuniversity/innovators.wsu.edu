@@ -28,6 +28,9 @@ html body {
 /**************************************
 	Typography
 **************************************/
+html main p {
+	padding-bottom:2em;
+}
 html main p,
 html main ol li,
 html main ul li {
@@ -71,6 +74,10 @@ html main h2 {
 }
 hr + h2 {
 	padding-top:2rem;
+}
+html main h3 {
+	padding-top: 1.5em;
+    padding-bottom: .8em;
 }
 /**************************************
 	Utilities
