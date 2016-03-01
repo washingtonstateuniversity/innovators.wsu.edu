@@ -21,9 +21,6 @@ html main {
 	max-width:990px;
 	min-height:100%;
 }
-html body {
-	    
-}
 /**************************************
 	Typography
 **************************************/
@@ -70,6 +67,10 @@ html main h1 {
 html main h2 {
 	font-weight:500;
 	padding-bottom:1.5rem;
+}
+html main h4 {
+	color:#fff;
+	background-color:#000;
 }
 hr + h2 {
 	padding-top:2rem;
@@ -158,6 +159,30 @@ body.single-post footer.main-footer {
 body.single-post footer.main-footer .column {
 	padding-top:0;
 	text-align: center;
+}
+body.single-post a.previous {
+	font-size:1.4em;
+	background: #fff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #4a4a4a;
+    border-radius: 0;
+    color: #464e54;
+    display: inline-block;
+    text-decoration: none;
+    margin-top:2em;
+    margin-bottom: 2em;
+    line-height: normal;
+    padding: .5em 1em;
+    vertical-align: middle;
+    cursor: pointer;
+}
+body.single-post a.previous:hover {
+	color: #fff;
+    background: #981E32;
+    border:1px solid #981E32;
+    transition:background .8s;
+    cursor: pointer;
 }
 /**************************************
 	Page
