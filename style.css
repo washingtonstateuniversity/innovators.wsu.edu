@@ -251,6 +251,9 @@ body.page-register .gform_wrapper form div.gform_body ul.gform_fields li label.g
 body.page-register .gform_wrapper form div.gform_body ul.gform_fields li div.ginput_container span.name_prefix {
 	width:100%;
 }
+body.page-register .gform_wrapper form div.gform_body ul.gform_fields li div.ginput_container span.name_prefix select {
+	width:45%;
+}
 div.ginput_complex.ginput_container.gf_name_has_3 span {
 	width:50%;
 }
