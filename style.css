@@ -418,9 +418,19 @@ a.button {
     line-height: normal;
     padding: .5em 1em;
     vertical-align: middle;
-    font-size:.8em;
 }    
 a.button:hover  {
+	color: #fff;
+    background: #981E32;
+    border:1px solid #981E32;
+    transition:background .8s;
+}
+a.button.cta {
+	background:rgba(0,165,189,1);
+	border:1px solid rgba(0,165,189,1);
+	color:#fff;
+}
+a.button.cta:hover {
 	color: #fff;
     background: #981E32;
     border:1px solid #981E32;
