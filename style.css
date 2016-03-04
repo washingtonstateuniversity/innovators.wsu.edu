@@ -622,7 +622,7 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	html main .logo-wrap + section.row,
 	html main .logo-wrap + .page,
 	html main .logo-wrap + .featured-image {
-		margin-top:4em;
+		margin-top:2em;
 	}
 	.spacing-loose .single.gutter .column:not(.gutterless) {
 		padding-left:1em;
@@ -650,6 +650,9 @@ body.blog footer.archive-footer .row.side-right .column.one {
 		padding-left:1em;
 		padding-right:1em;
 	}
+	body.blog figure.article-thumbnail {
+		height:150px;
+	}
 	span.embed-youtube {
 		display: initial !important;
 		float:none;
@@ -673,7 +676,9 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	}
 	body.blog .fluid .row.single.flex .column.one article {
 		padding-left:0;
-		width:380px;
+		width:100%;
+		padding-bottom:0;
+		margin-bottom:.5em;
 	}
 	.gform_wrapper .ginput_complex.ginput_container.has_first_name.has_middle_name.no_last_name span,
 	.gform_wrapper .ginput_complex.ginput_container.has_first_name.no_middle_name.has_last_name span,
@@ -788,6 +793,9 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	body.page-stormwater-detox #binder {
 		background-color:transparent;
 	}
+	html main .logo-wrap {
+		position:relative;
+	}
 }
 @media screen and (max-width: 490px) {
 	body.home .logo-wrap,
@@ -898,4 +906,10 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	body.home #spine.cropped.skimmed #wsu-signature {
 		background-image:url(https://repo.wsu.edu/spine/develop/marks/wsu-signature-horizontal.svg);
 	}
+}
+/**************************************
+	temp
+**************************************/
+.categorized {
+	display:none;
 }
