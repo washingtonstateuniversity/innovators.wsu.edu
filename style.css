@@ -248,6 +248,23 @@ body.page-register .gform_wrapper form div.gform_body ul.gform_fields li label.g
 	font-size: 1.5rem;
 	font-weight:400;
 }
+.gform_wrapper .gfield_checkbox li label,
+.gform_wrapper .gfield_radio li label {
+	font-size:1rem;
+	line-height: 2rem;
+	font-weight:400;
+	vertical-align: text-bottom;
+}
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input, 
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox], 
+.gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
+	height:35px;
+	margin:0;
+}
+.gform_wrapper ul.gfield_checkbox li, 
+.gform_wrapper ul.gfield_radio li {
+	margin-bottom:0;
+}
 body.page-register .gform_wrapper form div.gform_body ul.gform_fields li div.ginput_container span.name_prefix {
 	width:100%;
 }
