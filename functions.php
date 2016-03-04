@@ -13,3 +13,26 @@ add_filter( 'the_excerpt', 'ucomm_the_excerpt' );
 	}
 	return $excerpt;
 }
+
+add_filter( 'wsu_content_syndicate_host_data', 'innovators_filter_syndicate_host_data', 10, 2 );
+/**
+ * Filter the thumbnail used from a remote host with WSU Content Syndicate
+ *
+ * @param object $subset Data associated with a single remote item.
+ * @param object $post   Original data used to build the subset.
+ *
+ * @return object Modified data.
+ */
+function innovators_filter_syndicate_host_data( $subset, $post ) {
+	if ( isset( $post->featured_image ) && isset( $post->_embedded->{'https://api.w.org/featuredmedia'} ) && 0 < count( $post->_embedded->{'https://api.w.org/featuredmedia'} ) ) {
+		$subset_feature = $post->_embedded->{'https://api.w.org/featuredmedia'}[0]->media_details;
+		if ( isset( $subset_feature->sizes->{'spine-medium_size'} ) ) {
+			$subset->thumbnail = $subset_feature->sizes->{'spine-medium_size'}->source_url;
+		} else {
+			$subset->thumbnail = $post->_embedded->{'https://api.w.org/featuredmedia'}[0]->source_url;
+		}
+	} else {
+		$subset->thumbnail = false;
+	}
+	return $subset;
+}

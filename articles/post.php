@@ -18,7 +18,7 @@ $post_share_placement = spine_get_option( 'post_social_placement' );
 		<?php endif; // is_single() or in_a_relationship() ?>
 		</hgroup>
 		<hgroup class="source">
-			 ( <time class="article-date" datetime="<?php echo get_the_date( 'c' ); ?>"><?php echo get_the_date(); ?></time> )
+			 <time class="article-date" datetime="<?php echo get_the_date( 'c' ); ?>"><?php echo get_the_date(); ?></time>
 		</hgroup>
 
 		<?php if ( is_singular() && in_array( $post_share_placement, array( 'top', 'both' ) ) ) : ?>
