@@ -109,38 +109,16 @@ span.embed-youtube iframe {
 /**************************************
 	Logo
 **************************************/
+html body main .logo-wrap {
+	margin-bottom:3rem;
+}
 html main .logo-wrap #logo {
 	width:350px;
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
 }
-html body.blog main .logo-wrap {
-	margin-bottom:2rem;
-}
-html main .logo-wrap {
-	width: calc(100% - 198px);
-	max-width: 990px;
-	position: fixed;
-	z-index: 3;
-}
-html main .logo-wrap + section.row,
-html main .logo-wrap + .page,
-html main .logo-wrap + .featured-image {
-	margin-top:7em;
-}
 
-@media screen and (max-width: 990px) and (min-width: 791px) {
-	html main .logo-wrap #logo {
-		width: 350px;
-	}
-}
-
-@media screen and (max-width: 791px) {
-	html main .logo-wrap {
-		width: 100%;
-	}
-}
 /**************************************
 	Single post
 **************************************/
@@ -372,24 +350,26 @@ body.home .fluid .row.single.unbound .column hr {
 body.home .h1-header h1,
 body.page-stormwater-detox .h1-header h1 {
 	padding: 0 .8em .6em 0;
-	border-bottom:4px solid #4a4a4a;
+	border-bottom:4px solid black;
 	margin-bottom:.4em;
 	padding-left:1em;
+	font-weight:800;
 	padding-right:1em;
+	color:black;
 }
 body.home .h1-header h1 sub,
 body.page-stormwater-detox .h1-header h1 sub {
-	font-weight:300;
+	font-weight:400;
 	font-size:.5em;
 	line-height:1.1;
 	vertical-align: super;
-	width:65%;
+	width:85%;
 	display: block;
 	margin-top:.2em;
 }
 body.home .pad-top,
 body.page-stormwater-detox .pad-top {
-	padding-top:4em;
+	padding-top:5em;
 }
 body.home ul.sub-menu,
 body.page-stormwater-detox ul.sub-menu {
@@ -492,7 +472,25 @@ body.page-stormwater-detox .footer-img {
 	background-size: cover;
 	margin-top:-200px;
 }
-
+/**************************************
+	About Page
+**************************************/
+body.page-the-innovators-lecture-series .h1-header h1 {
+	padding: 0 .8em .6em 0;
+	border-bottom:4px solid #4a4a4a;
+	margin-bottom:.4em;
+	text-align: center;
+}
+body.page-the-innovators-lecture-series .fluid .row.single.h1-header .column {
+	width:70%;
+	margin-bottom:4em;
+}
+body.page-the-innovators-lecture-series .fluid .row.single .column {
+	width:55%;
+}
+body.home .fluid .row.single.unbound .column {
+	width:90%;
+}
 /**************************************
 	Archive feed
 **************************************/
@@ -607,6 +605,9 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	.fluid .row.side-right .column.one {
 		width:100%;
 	}
+	body.page-the-innovators-lecture-series .fluid .row.single.h1-header .column {
+		width:100%;
+	}
 	span.embed-youtube {
 		float:none;
 	}
@@ -633,14 +634,6 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	span.embed-youtube {
 		float:none;
 	}
-	html main .logo-wrap #logo { 
-		width:300px;
-	}
-	html main .logo-wrap + section.row,
-	html main .logo-wrap + .page,
-	html main .logo-wrap + .featured-image {
-		margin-top:2em;
-	}
 	.spacing-loose .single.gutter .column:not(.gutterless) {
 		padding-left:1em;
 		padding-right:1em;
@@ -650,11 +643,23 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	}
 }
 @media screen and (max-width: 490px) {
+	html body main .logo-wrap {
+		margin-bottom:1em;
+	}
+	html body.blog main .logo-wrap {
+		margin-bottom:0;
+	}
 	html main blockquote:before {
 		color:rgba(0,165,189,.2);
 		position: relative;
 		top:18px;
 		left:-10px;
+	}
+	body .column article header.article-header hgroup h1.article-title {
+		padding-right:0;
+	}
+	body.page-the-innovators-lecture-series .fluid .row.single.h1-header .column {
+		width:100%;
 	}
 	.fluid .row.side-right .column.one {
 		width:100%;
@@ -682,11 +687,6 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	}
 	html main .logo-wrap #logo { 
 		width:300px;
-	}
-	html main .logo-wrap + section.row,
-	html main .logo-wrap + .page,
-	html main .logo-wrap + .featured-image {
-		margin-top:3em;
 	}
 	body.blog .fluid .row.single.flex .column.one { 
 		display:block;
@@ -802,6 +802,32 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	body.page-stormwater-detox .footer-img {
 		height:300px;
 	}
+	body.home ul.sub-menu,
+	body.page-stormwater-detox ul.sub-menu {
+		display:block;
+		width:90%;
+		padding-left:0;
+		padding-right:0;
+		text-align: center;
+		margin-top:2em;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	body.home ul.sub-menu li,
+	body.page-stormwater-detox ul.sub-menu li {
+		list-style: none;
+	}
+	body.home ul li,
+	body.page-stormwater-detox ul li {
+		padding-bottom:1em;
+	}
+	a.button {
+		margin-bottom:1em;
+		width:100%;
+	}
+	body.home .video, body.page-stormwater-detox .video {
+		width:90%;
+	}
 }
 @media screen and (max-width: 790px) {
 	body.home #jacket,
@@ -809,9 +835,6 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	body.page-stormwater-detox #jacket,
 	body.page-stormwater-detox #binder {
 		background-color:transparent;
-	}
-	html main .logo-wrap {
-		position:relative;
 	}
 }
 @media screen and (max-width: 490px) {
@@ -855,6 +878,10 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	body.home .footer-img, 
 	body.page-stormwater-detox .footer-img {
 		height:300px;
+	}
+	body.home .video, body.page-stormwater-detox .video {
+		background-attachment: scroll;
+		margin-left: 1.2em;
 	}
 }
 /**************************************
