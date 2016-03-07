@@ -5,7 +5,7 @@ Author: WSU University Communications
 Author URI: https://web.wsu.edu/
 Description: A child theme of the WSU Web Communications Spine template.
 Template: spine
-Version: 0.1.11
+Version: 0.1.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -130,6 +130,41 @@ html main p.lecture-series {
     font-weight: 400;
     letter-spacing: 1px;
     color: black;
+}
+/**************************************
+	Top menu
+**************************************/
+nav.top-menu {
+	position: absolute;
+    right: 0;
+    top: 10px;
+}
+nav.top-menu ul {
+	display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+	display: -webkit-flex;
+  /* NEW - Chrome */
+	flex-flow: row ;
+	align-content: space-between;
+	justify-content: center;
+}
+nav.top-menu ul li {
+	list-style: none;
+	padding-right:.6em;	
+}
+nav.top-menu ul li a {
+	font-size: .8em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: black;
+}
+nav.top-menu ul li a:hover {
+	color:#981E32;
+	transition:color .8s;
 }
 /**************************************
 	Single post
@@ -790,6 +825,9 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	body.home .logo-wrap,
 	body.page-stormwater-detox .logo-wrap {
 		margin-bottom:1em;
+	}
+	nav.top-menu {
+		display:none;
 	}
 	body.home .fluid .row.single .column,
 	body.page-stormwater-detox .fluid .row.single .column {
