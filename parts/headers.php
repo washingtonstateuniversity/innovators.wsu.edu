@@ -26,4 +26,5 @@
 		c0,4.6-3.4,7.6-9.5,7.6C347.2,35.3,344,33.9,341.7,31.7z"/>
 </g>
 </svg>
+<p class="lecture-series">Lecture Series</p>
 </div>
