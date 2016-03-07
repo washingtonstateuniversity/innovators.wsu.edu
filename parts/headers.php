@@ -28,6 +28,7 @@
 </svg>
 <p class="lecture-series">Lecture Series</p>
 </div>
+<?php if ( is_front_page() ) : ?>
 <nav class="top-menu">
  	<ul>
  		<li><a href="/register/" title="register">Register</a></li>
@@ -35,3 +36,4 @@
  		<li><a href="/previous-lectures/" title="Previous lectures">Previous lectures</a></li>
  	</ul>
  </nav>
+<?php endif; ?>
