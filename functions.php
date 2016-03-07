@@ -9,7 +9,7 @@ add_filter( 'the_excerpt', 'ucomm_the_excerpt' );
 		$excerpt = trim( $excerpt );
 			if ( '</p>' === substr( $excerpt, -4 ) ) {
 		$excerpt = substr( $excerpt, 0, -4 ); // strip </p>	
-		$excerpt = $excerpt . ' <a href="<?php echo get_permalink(); ?>">read more</a></p>';
+		$excerpt = $excerpt . ' <a href="' . esc_url( get_permalink() ) . '">read more</a></p>';
 	}
 	return $excerpt;
 }
