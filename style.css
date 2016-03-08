@@ -497,11 +497,6 @@ body.page-stormwater-detox .footer-img {
 /**************************************
 	Home top menu
 **************************************/
-body.blog nav.top-menu,
-body.single-post nav.top-menu,
-body.single nav.top-menu {
-	display:none;
-}
 body.home nav.top-menu {
 	position: absolute;
     right: 0;
@@ -913,6 +908,10 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	body.page-stormwater-detox #jacket,
 	body.page-stormwater-detox #binder {
 		background-color:transparent;
+	}
+	body.home #jacket #binder #spine.darker #glue:before {
+		background:#23282B;
+		background-color:#23282B;
 	}
 }
 @media screen and (max-width: 490px) {
