@@ -5,7 +5,7 @@ Author: WSU University Communications
 Author URI: https://web.wsu.edu/
 Description: A child theme of the WSU Web Communications Spine template.
 Template: spine
-Version: 0.1.15
+Version: 0.1.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -69,6 +69,10 @@ html main h2 {
 	font-weight:500;
 	padding-bottom:1.5rem;
 }
+html main h3 {
+	padding-top: 1.5em;
+    padding-bottom: .8em;
+}
 html main h4 {
 	color:#fff;
 	background-color:#000;
@@ -78,10 +82,6 @@ p + hr {
 }
 hr + h2 {
 	padding-top:2rem;
-}
-html main h3 {
-	padding-top: 1.5em;
-    padding-bottom: .8em;
 }
 /**************************************
 	Utilities
@@ -390,6 +390,22 @@ body.page-stormwater-detox h2 {
 body.home .pad-top,
 body.page-stormwater-detox .pad-top {
 	padding-top:4em;
+}
+.home span.embed-youtube {
+	float: none;
+	width: auto;
+	margin: 0;
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	margin: .5rem 0 2.5rem;
+}
+.home span.embed-youtube iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 body.home ul.sub-menu,
 body.page-stormwater-detox ul.sub-menu {
@@ -757,8 +773,9 @@ body.blog footer.archive-footer .row.side-right .column.one {
 		display:block;
 	}
 	body.blog .fluid .row.single.flex .column.one article {
-		padding-left:0;
 		width:100%;
+		padding-left:0;
+		padding-right: 0;
 		padding-bottom:0;
 		margin-bottom:.5em;
 	}
@@ -953,6 +970,9 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	body.page-stormwater-detox .single.gutter .column:not(.gutterless) {
 		padding-left:2em;
 		padding-right:2em;
+	}
+	.home span.embed-youtube {
+		display: block !important;
 	}
 	body.home .fluid .row.single.unbound .column hr {
 		width:100%;
