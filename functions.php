@@ -24,7 +24,7 @@ add_filter( 'wsu_content_syndicate_host_data', 'innovators_filter_syndicate_host
  * @return object Modified data.
  */
 function innovators_filter_syndicate_host_data( $subset, $post ) {
-	if ( isset( $post->featured_image ) && isset( $post->_embedded->{'https://api.w.org/featuredmedia'} ) && 0 < count( $post->_embedded->{'https://api.w.org/featuredmedia'} ) ) {
+	if ( isset( $post->featured_media ) && isset( $post->_embedded->{'https://api.w.org/featuredmedia'} ) && 0 < count( $post->_embedded->{'https://api.w.org/featuredmedia'} ) ) {
 		$subset_feature = $post->_embedded->{'https://api.w.org/featuredmedia'}[0]->media_details;
 		if ( isset( $subset_feature->sizes->{'spine-medium_size'} ) ) {
 			$subset->thumbnail = $subset_feature->sizes->{'spine-medium_size'}->source_url;
