@@ -5,7 +5,7 @@ Author: WSU University Communications
 Author URI: https://web.wsu.edu/
 Description: A child theme of the WSU Web Communications Spine template.
 Template: spine
-Version: 0.1.20
+Version: 0.1.21
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -331,7 +331,7 @@ main textarea:focus {
 /**************************************
 	Home Page
 **************************************/
-/*body.home #jacket,
+body.home #jacket,
 body.home #binder,
 body.page-stormwater-detox #jacket,
 body.page-stormwater-detox #binder {
@@ -349,7 +349,6 @@ body.page-stormwater-detox .spineless.fluid main {
 	margin-left:auto;
 	margin-right:auto;
 }
-*/
 body.home .spacing-loose .single.gutter .column:not(.gutterless),
 body.page-stormwater-detox .single.gutter .column:not(.gutterless) {
 	padding:0;
