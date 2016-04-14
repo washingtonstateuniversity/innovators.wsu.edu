@@ -31,7 +31,7 @@
 <?php if ( is_front_page() ) : ?>
 <nav class="top-menu">
  	<ul>
- 		<li><a href="/register/" title="register">Register</a></li>
+ 		<li><a href="/media/" title="media">Media</a></li>
  		<li><a href="/the-innovators-lecture-series/" title="About Innovators">About Innovators</a></li>
  		<li><a href="/previous-lectures/" title="Previous lectures">Previous lectures</a></li>
  	</ul>
