@@ -879,7 +879,7 @@ body.blog footer.archive-footer .row.side-right .column.one {
 		padding-right:2em;
 	}
 	body.home .fluid .row.single.unbound .column {
-		width:100%;
+		width:100% !important;
 	}
 	body.home .h1-header{
 		margin-top:5em;
@@ -956,11 +956,10 @@ body.blog footer.archive-footer .row.side-right .column.one {
 		padding-right:2em;
 	}
 	body.home .h1-header{
-		margin-top:10em;
+		margin-top:5em;
 	}
 	body.home .h1-header h1 sub{
 		width:100%;
-
 	}
 	body.home .h1-header + .section-wrapper .pad-top{
 		padding-top:2em;
@@ -968,6 +967,12 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	body.home .spacing-loose .single.gutter .column:not(.gutterless){
 		padding-left:2em;
 		padding-right:2em;
+	}
+	.home .home-date {
+		width:80%;
+	}
+	body.home .speaker-wrap {
+		padding-bottom:1em;
 	}
 	.home span.embed-youtube {
 		display: block !important;
@@ -993,6 +998,9 @@ body.blog footer.archive-footer .row.side-right .column.one {
 @media only screen and (min-width: 791px) and (max-width: 990px) {
 	body.home #spine #glue.spine-glue {
 		min-height:0 !important;
+	}
+#binder.fluid .home .row:not(.column):not(.rebound).unbound .column {
+		width:100%;
 	}
 	body.home #spine .spine-sitenav,
 	body.home #spine footer {
