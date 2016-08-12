@@ -31,7 +31,8 @@ html main p,
 html main ol li,
 html main ul li {
 	font-size:1.1rem;
-	line-height: 1.5;
+	line-height: 1.6;
+	font-weight:300;
 }
 html main blockquote {
 	font: inherit;
@@ -331,64 +332,73 @@ main textarea:focus {
 /**************************************
 	Home Page
 **************************************/
-body.home #jacket,
-body.home #binder,
-body.page-stormwater-detox #jacket,
-body.page-stormwater-detox #binder {
-	background:#fff;
-	width:100%;
+html body.home main {
+	max-width:100%;
+	background:transparent;
 }
-body.home #jacket #binder #spine.darker #glue:before {
+html body.home main section {
 	background:#fff;
-	background-color:#fff;
 }
-body.home .spineless .fluid main,
-body.home .spineless.fluid main,
-body.page-stormwater-detox .spineless.fluid main,
-body.page-stormwater-detox .spineless.fluid main {
+html body.home main section.h1-header {
+  background: transparent;
+	padding-bottom:2em;
+}
+body.home.fluid main {
 	margin-left:auto;
 	margin-right:auto;
 }
-body.home .spacing-loose .single.gutter .column:not(.gutterless),
-body.page-stormwater-detox .single.gutter .column:not(.gutterless) {
+body.home #jacket,
+body.home #binder {
+	width:100% !important;
+}
+@media only screen and (min-width: 990px) {
+	#binder.fluid.max-1584, #binder.fluid.max-1584 .row {
+    max-width: 100%;
+	}
+}
+body.home .spacing-loose .single.gutter .column:not(.gutterless){
 	padding:0;
 }
-body.home .fluid .row.single .column,
-body.page-stormwater-detox .fluid .row.single .column {
-	width:55%;
+body.home .fluid .row.single .column {
+	width:60%;
 }
-body.home .fluid .row.single.unbound .column {
-	width:90%;
-}
-body.home .fluid .row.single.unbound .column hr {
+#binder.fluid .row:not(.column):not(.rebound).unbound .column {
 	width:70%;
 }
-body.home .h1-header h1,
-body.page-stormwater-detox .h1-header h1 {
-	padding: 0 .8em .6em 0;
-	border-bottom:4px solid black;
+.home .guest p {
+	display:inline-block;
+	padding:.6em;
+	line-height:1;
+	font-weight:600;
+	text-transform: uppercase;
+	background:#000;
+	color:#fff;
+}
+body.home .fluid .row.single.unbound .column hr {
+	width:100%;
+}
+body.home .h1-header h1 {
 	margin-bottom:.4em;
 	padding-left:1em;
 	font-weight:700;
-	padding-right:1em;
 	color:black;
 }
-body.home .h1-header h1 sub,
-body.page-stormwater-detox .h1-header h1 sub {
+body.home .h1-header h1 sub {
 	font-weight:400;
 	font-size:.5em;
-	line-height:1.1;
+	line-height:1.4;
 	vertical-align: super;
 	width:85%;
 	display: block;
 	margin-top:.2em;
 }
-body.home h2,
-body.page-stormwater-detox h2 {
+body.home hr {
+	margin-bottom:3em;
+}
+body.home h2 {
 	color:black;
 }
-body.home .pad-top,
-body.page-stormwater-detox .pad-top {
+body.home .pad-top {
 	padding-top:4em;
 }
 .home span.embed-youtube {
@@ -407,8 +417,7 @@ body.page-stormwater-detox .pad-top {
 	width: 100%;
 	height: 100%;
 }
-body.home ul.sub-menu,
-body.page-stormwater-detox ul.sub-menu {
+body.home ul.sub-menu {
 	display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
 	display: -moz-box;
@@ -428,40 +437,39 @@ body.page-stormwater-detox ul.sub-menu {
 	margin-left:auto;
 	margin-right:auto;
 }
-body.home ul.sub-menu li,
-body.page-stormwater-detox ul.sub-menu li {
+body.home ul.sub-menu li {
 	flex:1;
 	list-style: none;
 }
-body.home ul li,
-body.page-stormwater-detox ul li {
+body.home ul li {
 	padding-bottom:1em;
 }
 a.button {
-	width:250px;
+	width:100%;
 	background: #fff;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #4a4a4a;
-    border-radius: 0;
-    color: #464e54;
-    display: inline-block;
-    text-decoration: none;
-    margin-bottom: 2em;
-    line-height: normal;
-    padding: .5em 1em;
-    vertical-align: middle;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #4a4a4a;
+  border-radius: 0;
+  color: #464e54;
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 2em;
+  line-height: normal;
+  padding: .5em 1em;
+  vertical-align: middle;
 }
 a.button:hover  {
 	color: #fff;
-    background: #981E32;
-    border:1px solid #981E32;
-    transition:background .8s;
+  background: #981E32;
+  border:1px solid #981E32;
+  transition:background .8s;
 }
 a.button.cta {
 	background:rgba(0,165,189,1);
 	border:1px solid rgba(0,165,189,1);
 	color:#fff;
+	text-align: center;
 }
 a.button.cta:hover {
 	color: #fff;
@@ -469,26 +477,22 @@ a.button.cta:hover {
     border:1px solid #981E32;
     transition:background .8s;
 }
-body.home h3,
-body.page-stormwater-detox h3 {
-	font-weight:300;
+body.home h3 {
+	font-weight:600;
 	padding-top:.5em;
 	padding-bottom:.5em;
 }
-/* interim art */
-body.home .featured-image,
-body.page-stormwater-detox .featured-image {
+/* art */
+body.home .featured-image {
 	width:100%;
 	height:555px;
 	position:absolute;
 	left:0;
 }
-body.home .h1-header ,
-body.page-stormwater-detox .h1-header {
-	margin-top:23em;
+body.home .h1-header {
+	margin-top:8em;
 }
-body.home .video,
-body.page-stormwater-detox .video {
+body.home .video {
 	width:100%;
 	height:450px;
 	background-size:cover;
@@ -497,18 +501,30 @@ body.page-stormwater-detox .video {
 	background-position: center top;
 }
 
-body.home .mid,
-body.page-stormwater-detox .mid {
+body.home .mid {
 	background-repeat:no-repeat;
 	background-position: 1% 20%;
 }
-body.home .footer-img,
-body.page-stormwater-detox .footer-img {
+body.home .footer-img {
 	height:500px;
 	display:block;
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin-top:-200px;
+}
+.home-date {
+    width: 55%;
+    margin: auto;
+		padding-top:2em;
+}
+.home-date .button.cta {
+	margin:auto;
+}
+body.home .speaker-wrap {
+	padding-bottom:6.7em;
+}
+body.home .speaker-wrap p {
+	padding-bottom:.8em;
 }
 /**************************************
 	Home top menu
@@ -851,15 +867,13 @@ body.blog footer.archive-footer .row.side-right .column.one {
 **************************************/
 
 @media screen and (max-width: 990px) {
-	body.home .logo-wrap,
-	body.page-stormwater-detox .logo-wrap {
+	body.home .logo-wrap {
 		margin-bottom:1em;
 	}
 	body.home nav.top-menu {
 		display:none;
 	}
-	body.home .fluid .row.single .column,
-	body.page-stormwater-detox .fluid .row.single .column {
+	body.home .fluid .row.single .column {
 		width:80%;
 		padding-left:2em;
 		padding-right:2em;
@@ -867,28 +881,23 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	body.home .fluid .row.single.unbound .column {
 		width:100%;
 	}
-	body.home .h1-header,
-	body.page-stormwater-detox .h1-header {
-		margin-top:15em;
+	body.home .h1-header{
+		margin-top:5em;
 	}
-	body.home .h1-header h1 sub,
-	body.page-stormwater-detox .h1-header h1 sub {
+	body.home .h1-header h1 sub{
 		width:80%;
 	}
 	body.home .fluid .row.single.unbound .column hr {
 		width:90%;
 	}
-	body.home .mid,
-	body.page-stormwater-detox .mid {
+	body.home .mid {
     	background-repeat: no-repeat;
     	background-position: -31% 48%;
 	}
-	body.home .footer-img,
-	body.page-stormwater-detox .footer-img {
+	body.home .footer-img {
 		height:300px;
 	}
-	body.home ul.sub-menu,
-	body.page-stormwater-detox ul.sub-menu {
+	body.home ul.sub-menu {
 		display:block;
 		width:90%;
 		padding-left:0;
@@ -898,19 +907,17 @@ body.blog footer.archive-footer .row.side-right .column.one {
 		margin-left:auto;
 		margin-right:auto;
 	}
-	body.home ul.sub-menu li,
-	body.page-stormwater-detox ul.sub-menu li {
+	body.home ul.sub-menu li {
 		list-style: none;
 	}
-	body.home ul li,
-	body.page-stormwater-detox ul li {
+	body.home ul li {
 		padding-bottom:1em;
 	}
 	a.button {
 		margin-bottom:1em;
 		width:100%;
 	}
-	body.home .video, body.page-stormwater-detox .video {
+	body.home .video {
 		width:90%;
 	}
 }
@@ -921,9 +928,7 @@ body.blog footer.archive-footer .row.side-right .column.one {
 }
 @media screen and (max-width: 790px) {
 	body.home #jacket,
-	body.home #binder,
-	body.page-stormwater-detox #jacket,
-	body.page-stormwater-detox #binder {
+	body.home #binder {
 		background-color:transparent;
 	}
 	body.home #jacket #binder #spine.darker #glue:before {
@@ -932,18 +937,15 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	}
 }
 @media screen and (max-width: 490px) {
-	body.home .logo-wrap,
-	body.page-stormwater-detox .logo-wrap {
+	body.home .logo-wrap {
 		margin-bottom:1em;
 	}
-	body.home .fluid .row.single .column,
-	body.page-stormwater-detox .fluid .row.single .column {
+	body.home .fluid .row.single .column {
 		width:100%;
 		padding-left:2em;
 		padding-right:2em;
 	}
-	body.home .fluid .row.single.h1-header .column h1,
-	body.page-stormwater-detox .fluid .row.single.h1-header .column h1 {
+	body.home .fluid .row.single.h1-header .column h1 {
 		padding-left:0;
 		padding-right:0;
 		font-size:2.5em;
@@ -953,21 +955,17 @@ body.blog footer.archive-footer .row.side-right .column.one {
 		padding-left:2em;
 		padding-right:2em;
 	}
-	body.home .h1-header,
-	body.page-stormwater-detox .h1-header {
+	body.home .h1-header{
 		margin-top:10em;
 	}
-	body.home .h1-header h1 sub,
-	body.page-stormwater-detox .h1-header h1 sub {
+	body.home .h1-header h1 sub{
 		width:100%;
 
 	}
-	body.home .h1-header + .section-wrapper .pad-top,
-	body.page-stormwater-detox .h1-header + .section-wrapper .pad-top {
+	body.home .h1-header + .section-wrapper .pad-top{
 		padding-top:2em;
 	}
-	body.home .spacing-loose .single.gutter .column:not(.gutterless),
-	body.page-stormwater-detox .single.gutter .column:not(.gutterless) {
+	body.home .spacing-loose .single.gutter .column:not(.gutterless){
 		padding-left:2em;
 		padding-right:2em;
 	}
@@ -977,16 +975,14 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	body.home .fluid .row.single.unbound .column hr {
 		width:100%;
 	}
-	body.home .mid,
-	body.page-stormwater-detox .mid {
+	body.home .mid {
     	background-repeat: no-repeat;
     	background-position: -60% 45%;
 	}
-	body.home .footer-img,
-	body.page-stormwater-detox .footer-img {
+	body.home .footer-img {
 		height:300px;
 	}
-	body.home .video, body.page-stormwater-detox .video {
+	body.home .video {
 		background-attachment: scroll;
 		margin-left: 1.2em;
 	}
