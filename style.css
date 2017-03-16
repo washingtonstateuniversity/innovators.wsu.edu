@@ -421,6 +421,9 @@ body.home h2 {
 	color: #981E32;
 	transition: color .8s;
 }
+body.home .pad-top {
+	padding-top:4em;
+}
 .home span.embed-youtube {
 	float: none;
 	width: auto;
