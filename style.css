@@ -72,14 +72,14 @@ html main h2 {
 }
 html main h3 {
 	padding-top: 1.5em;
-    padding-bottom: .8em;
+  padding-bottom: .8em;
 }
 html main h4 {
 	color:#fff;
 	background-color:#000;
 }
 p + hr {
-	margin-top:1.5em;
+	padding-top:1.5em;
 }
 hr + h2 {
 	padding-top:2rem;
@@ -89,11 +89,12 @@ hr + h2 {
 **************************************/
 hr {
 	border: 0;
-    height: 2px;
-    background: #4a4a4a;
-    margin-top:3em;
-    margin-left:auto;
-    margin-right:auto;
+  height: 2px;
+  background: transparent;
+	border-top: 1px solid #4a4a4a;
+  padding-top:3em;
+  margin-left:auto;
+  margin-right:auto;
 }
 span.embed-youtube {
 	float: right;
@@ -408,9 +409,6 @@ body.home .h1-header h1 sub {
 	display: block;
 	margin-top:.2em;
 }
-body.home hr {
-	margin-bottom:3em;
-}
 body.home h2 {
 	color:black;
 }
@@ -676,9 +674,26 @@ body.blog footer.archive-footer .row.side-right .column.one {
 /**************************************
 	Random colors
 **************************************/
+.home.ten1,
+.home.ten2,
+.home.ten3,
+.home.ten4,
+.home.ten5,
+.home.ten6,
+.home.ten7,
+.home.ten8,
+.home.ten9,
+.home.ten10 {
+	background: rgb(239,239,239); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(239,239,239,1) 0%, rgba(247,247,247,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(239,239,239,1) 0%,rgba(247,247,247,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(239,239,239,1) 0%,rgba(247,247,247,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */
+	background-attachment: fixed;
+}
 .ten1,
 .ten3 {
-	    background: rgb(0, 165, 189);
+	  background: rgb(0, 165, 189);
     background-image: -webkit-gradient(linear, bottom top, bottom top, color-stop(20%, rgba(0, 165, 189, 1)), color-stop(100%, rgba(185, 192, 10, 1)));
     background-image: -webkit-linear-gradient(bottom, rgba(0, 165, 189, 1) 20%, rgba(185, 192, 10, 1) 100%);
     background-image: linear-gradient(to top, rgba(0, 165, 189, 1) 20%, rgba(185, 192, 10, 1) 100%);
@@ -943,7 +958,7 @@ body.blog footer.archive-footer .row.side-right .column.one {
 		width:100%;
 	}
 	body.home .video {
-		width:90%;
+		width:100%;
 	}
 }
 @media screen and (max-width: 800px) {
@@ -980,9 +995,6 @@ body.blog footer.archive-footer .row.side-right .column.one {
 		padding-left:2em;
 		padding-right:2em;
 	}
-	body.home .h1-header{
-		margin-top:5em;
-	}
 	body.home .h1-header h1 sub{
 		width:100%;
 	}
@@ -1014,17 +1026,22 @@ body.blog footer.archive-footer .row.side-right .column.one {
 	}
 	body.home .video {
 		background-attachment: scroll;
-		margin-left: 1.2em;
 	}
 }
 /**************************************
 	Media queries for spine
 **************************************/
+@media screen and (max-width: 791px) {
+	body.home #jacket #binder.fluid main,
+	body.home #jacket #binder.hybrid main {
+		margin-top: 44px;
+	}
+}
 @media only screen and (min-width: 791px) and (max-width: 990px) {
 	body.home #spine #glue.spine-glue {
 		min-height:0 !important;
 	}
-#binder.fluid .home .row:not(.column):not(.rebound).unbound .column {
+	#binder.fluid .home .row:not(.column):not(.rebound).unbound .column {
 		width:100%;
 	}
 	body.home #spine .spine-sitenav,
